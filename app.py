@@ -5,7 +5,7 @@ from PIL import Image
 
 @st.cache_resource
 def load_model():
-    model = tf.keras.models.load_model("my_model.h5")
+    model = tf.keras.models.load_model("model.h5")
     return model
 
 model = load_model()
@@ -32,3 +32,4 @@ if uploaded_file is not None:
     st.subheader("Prediction Result")
     st.write(f"**Class:** {predicted_class}")
     st.write(f"**Confidence:** {confidence:.2f}%")
+
